@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
-import time GPIO.setwarnings(False)
+import time 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)  # Broadcom SOC channel pin numbering
 LED = 25
 GPIO.setup(LED,GPIO.OUT)
