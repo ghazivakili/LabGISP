@@ -1,16 +1,19 @@
 <?php
 $servername = "localhost"; 
 $username = "root";
-$password = "password"; 
-$dbname = "my_db";
-// Create connection $conn = new mysqli($servername, $username, $password, $dbname); // Check connection if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); } 
-$sql = "SELECT * FROM tabella"; 
+$password = "Raspberry2018"; 
+$dbname = "website";
+// Create connection 
+$conn = new mysqli($servername, $username, $password, $dbname); 
+// Check connection 
+if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); } 
+$sql = "SELECT * FROM name"; 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) { 
 // Output data of each row 
 while($row = $result->fetch_assoc()) 
 { 
-echo $row["colonna2"]." ".$row["colonna3"]." ".$row["colonna4"]."<BR>"; } 
+echo $row["FirstName"]." ".$row["FamilyName"]." ".$row["Address"]."<BR>"; } 
 } else { 
 echo "No results"; 
 } 
