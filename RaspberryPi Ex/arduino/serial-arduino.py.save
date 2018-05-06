@@ -1,0 +1,6 @@
+import serial 
+s = serial.Serial('ttyUSB0', 9600) 
+data = input('Send to Arduino: ') 
+s.write(data + '\n') 
+print(s.readline()) 
+s.close()
